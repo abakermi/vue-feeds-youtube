@@ -1,6 +1,6 @@
 {
   "name": "vue-feeds-youtube",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/vfeedyoutube.common.js",
   "files": [
     "dist/*"
