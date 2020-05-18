@@ -40,7 +40,7 @@ export default {
         let entriesTitle = entries[i].title;
         let author = entries[i].author;
         let publishedAt = moment().from(entries[i].pubDate, true);
-        myOutput += `<li><div class="content"> <div class="thumbnail"><iframe class="thumbnail"  src="http://www.youtube.com/embed/${entriesID}"
+        myOutput += `<li><div class="content"> <div class="thumbnail"><iframe class="thumbnail"  src="https://www.youtube.com/embed/${entriesID}"
          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         ></iframe></div>
         <div class="details"> <div class="metadata"><a class="entry-title"> ${entriesTitle} 
