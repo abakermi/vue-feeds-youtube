@@ -1,5 +1,6 @@
 # vue-feeds-youtube
-[![Build Status](https://travis-ci.com/abakermi/vue-feeds-youtube.svg?branch=master)](https://travis-ci.com/abakermi/vue-feeds-youtube) [![npm version](https://badge.fury.io/js/vue-feeds-youtube.svg)](https://badge.fury.io/js/vue-feeds-youtube) [![npm](https://img.shields.io/npm/l/vue-feeds-youtube.svg)](http://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/abakermi/vue-feeds-youtube.svg?branch=master)](https://travis-ci.com/abakermi/vue-feeds-youtube) [![npm version](https://badge.fury.io/js/vue-feeds-youtube.svg)](https://badge.fury.io/js/vue-feeds-youtube)
+
 
 vue component to get youtube feeds
 
@@ -69,4 +70,4 @@ export default {
 
 ## License
 
-MIT © [Abdelhak Akermi](https://github.com/abakermi)
+vue-feeds-youtube is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)i)
