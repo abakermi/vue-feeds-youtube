@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <v-feed-youtube
-      channel-url="https://www.youtube.com/feeds/videos.xml?channel_id=UC3SdeibuuvF-ganJesKyDVQ"
-    ></v-feed-youtube>
+    <v-feed-youtube channel-id="UC3SdeibuuvF-ganJesKyDVQ"></v-feed-youtube>
   </div>
 </template>
 

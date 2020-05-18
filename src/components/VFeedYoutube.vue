@@ -10,7 +10,7 @@ const p = new parser();
 export default {
   name: "VFeedYoutube",
   props: {
-    ChannelUrl: {
+    ChannelId: {
       type: String,
       required: true
     }
@@ -18,8 +18,12 @@ export default {
 
   mounted() {
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    const ytbXmlUrl = "http://www.youtube.com/feeds/videos.xml?channel_id=";
     const self = this;
-    p.parseURL(`${CORS_PROXY}${this.ChannelUrl}`, function(err, feed) {
+    p.parseURL(`${CORS_PROXY}${ytbXmlUrl}${this.ChannelId}`, function(
+      err,
+      feed
+    ) {
       if (err) throw err;
       self.listVideos(feed);
     });
