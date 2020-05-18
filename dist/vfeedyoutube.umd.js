@@ -17971,12 +17971,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9ceae23c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VFeedYoutube.vue?vue&type=template&id=0b2f47ab&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d853e58-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VFeedYoutube.vue?vue&type=template&id=192c3375&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"videogroup"}},[_c('div',{attrs:{"id":"videolist"}})])}]
 
 
-// CONCATENATED MODULE: ./src/components/VFeedYoutube.vue?vue&type=template&id=0b2f47ab&
+// CONCATENATED MODULE: ./src/components/VFeedYoutube.vue?vue&type=template&id=192c3375&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
 var es_array_concat = __webpack_require__("99af");
@@ -18015,12 +18015,15 @@ var p = new parser();
   },
   mounted: function mounted() {
     var CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-    var ytbXmlUrl = "http://www.youtube.com/feeds/videos.xml?channel_id=";
+    var ytbXmlUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=";
     var self = this;
-    p.parseURL("".concat(CORS_PROXY).concat(ytbXmlUrl).concat(this.ChannelId), function (err, feed) {
-      if (err) throw err;
-      self.listVideos(feed);
-    });
+
+    if (this.ChannelId) {
+      p.parseURL("".concat(CORS_PROXY).concat(ytbXmlUrl).concat(this.ChannelId), function (err, feed) {
+        if (err) throw err;
+        self.listVideos(feed);
+      });
+    }
   },
   methods: {
     listVideos: function listVideos(data) {
@@ -18033,7 +18036,7 @@ var p = new parser();
         var entriesTitle = entries[i].title;
         var author = entries[i].author;
         var publishedAt = moment_min_default()().from(entries[i].pubDate, true);
-        myOutput += "<li><div class=\"content\"> <div class=\"thumbnail\"><iframe class=\"thumbnail\"  src=\"http://www.youtube.com/embed/".concat(entriesID, "\"\n         frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\n        ></iframe></div>\n        <div class=\"details\"> <div class=\"metadata\"><a class=\"entry-title\"> ").concat(entriesTitle, " \n        </a><a class=\"author\">").concat(author, "</a><span class=\"date\">").concat(publishedAt, " ago</span> </div></div></div></li>");
+        myOutput += "<li><div class=\"content\"> <div class=\"thumbnail\"><iframe class=\"thumbnail\"  src=\"https://www.youtube.com/embed/".concat(entriesID, "\"\n         frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\n        ></iframe></div>\n        <div class=\"details\"> <div class=\"metadata\"><a class=\"entry-title\"> ").concat(entriesTitle, " \n        </a><a class=\"author\">").concat(author, "</a><span class=\"date\">").concat(publishedAt, " ago</span> </div></div></div></li>");
       }
 
       document.getElementById("videolist").innerHTML = myOutput;
