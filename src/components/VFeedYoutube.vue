@@ -20,13 +20,15 @@ export default {
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
     const ytbXmlUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=";
     const self = this;
-    p.parseURL(`${CORS_PROXY}${ytbXmlUrl}${this.ChannelId}`, function(
-      err,
-      feed
-    ) {
-      if (err) throw err;
-      self.listVideos(feed);
-    });
+    if (this.ChannelId) {
+      p.parseURL(`${CORS_PROXY}${ytbXmlUrl}${this.ChannelId}`, function(
+        err,
+        feed
+      ) {
+        if (err) throw err;
+        self.listVideos(feed);
+      });
+    }
   },
   methods: {
     listVideos(data) {
