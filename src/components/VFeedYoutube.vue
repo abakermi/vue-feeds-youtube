@@ -18,7 +18,7 @@ export default {
 
   mounted() {
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-    const ytbXmlUrl = "http://www.youtube.com/feeds/videos.xml?channel_id=";
+    const ytbXmlUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=";
     const self = this;
     p.parseURL(`${CORS_PROXY}${ytbXmlUrl}${this.ChannelId}`, function(
       err,
